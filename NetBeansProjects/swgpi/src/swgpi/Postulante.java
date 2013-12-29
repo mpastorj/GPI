@@ -135,6 +135,11 @@ public class Postulante extends javax.swing.JFrame {
 
         continuar.setFont(new java.awt.Font("Batang", 1, 14)); // NOI18N
         continuar.setText("Continuar");
+        continuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continuarActionPerformed(evt);
+            }
+        });
 
         atras.setFont(new java.awt.Font("Batang", 0, 14)); // NOI18N
         atras.setText("Atrás");
@@ -180,6 +185,14 @@ public class Postulante extends javax.swing.JFrame {
         v.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_atrasActionPerformed
+
+    private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
+        // TODO add your handling code here:
+        PostulantePreguntas v = new PostulantePreguntas();
+        v.setLocationRelativeTo(null);
+        v.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_continuarActionPerformed
 
     /**
      * @param args the command line arguments
