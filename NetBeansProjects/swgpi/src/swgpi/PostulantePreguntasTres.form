@@ -36,7 +36,7 @@
                   <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
                   <Component id="jPanel4" alignment="1" max="32767" attributes="0"/>
                   <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jPanel6" alignment="1" max="32767" attributes="0"/>
+                  <Component id="jPanel6" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="continuar" min="-2" max="-2" attributes="0"/>
@@ -50,20 +50,20 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
               <Component id="continuar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -73,9 +73,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Pregunta 8">
+            <TitledBorder title="Pregunta 13">
               <Font PropertyName="font" name="Batang" size="12" style="0"/>
-              <Color PropertyName="color" blue="0" green="33" red="66" type="rgb"/>
+              <Color PropertyName="color" blue="0" green="0" red="99" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -87,7 +87,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="323" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -104,7 +104,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 8"/>
+            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 13"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -113,9 +113,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Pregunta 9">
+            <TitledBorder title="Pregunta 14">
               <Font PropertyName="font" name="Batang" size="12" style="0"/>
-              <Color PropertyName="color" blue="0" green="ff" red="cc" type="rgb"/>
+              <Color PropertyName="color" blue="cc" green="cc" red="0" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -127,7 +127,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="323" max="32767" attributes="0"/>
+                  <EmptySpace pref="308" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -144,7 +144,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 9"/>
+            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 14"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -153,9 +153,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Pregunta 7">
+            <TitledBorder title="Pregunta 15">
               <Font PropertyName="font" name="Batang" size="12" style="0"/>
-              <Color PropertyName="color" blue="66" green="66" red="ff" type="rgb"/>
+              <Color PropertyName="color" blue="0" green="66" red="66" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -167,7 +167,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="323" max="32767" attributes="0"/>
+                  <EmptySpace pref="308" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -184,7 +184,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 7"/>
+            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 15"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -193,9 +193,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Pregunta 11">
+            <TitledBorder title="Pregunta 16">
               <Font PropertyName="font" name="Batang" size="12" style="0"/>
-              <Color PropertyName="color" blue="cc" green="33" red="ff" type="rgb"/>
+              <Color PropertyName="color" blue="33" green="cc" red="0" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -207,7 +207,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="317" max="32767" attributes="0"/>
+                  <EmptySpace pref="308" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -224,7 +224,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 11"/>
+            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 16"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -233,9 +233,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Pregunta 10">
+            <TitledBorder title="Pregunta 18">
               <Font PropertyName="font" name="Batang" size="12" style="0"/>
-              <Color PropertyName="color" blue="ff" green="ff" red="0" type="rgb"/>
+              <Color PropertyName="color" blue="ff" green="99" red="99" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -247,7 +247,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="317" max="32767" attributes="0"/>
+                  <EmptySpace pref="308" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -264,7 +264,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 10"/>
+            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 18"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -273,9 +273,9 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Pregunta 12">
+            <TitledBorder title="Pregunta 17">
               <Font PropertyName="font" name="Batang" size="12" style="0"/>
-              <Color PropertyName="color" blue="99" green="0" red="33" type="rgb"/>
+              <Color PropertyName="color" blue="0" green="99" red="ff" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -287,7 +287,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="317" max="32767" attributes="0"/>
+                  <EmptySpace pref="308" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -304,7 +304,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 12"/>
+            <Property name="text" type="java.lang.String" value="Aqu&#xed; va la pregunta n&#xfa;mero 17"/>
           </Properties>
         </Component>
       </SubComponents>
