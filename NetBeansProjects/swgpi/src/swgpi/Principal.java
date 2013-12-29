@@ -4,6 +4,9 @@
  */
 package swgpi;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Marilyn
@@ -33,6 +36,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Iniciar Sesión");
+        setIconImage(getIconImage());
 
         jLabel1.setFont(new java.awt.Font("Batang", 0, 36)); // NOI18N
         jLabel1.setText("Bienvenido a GPI-SW");
@@ -120,6 +125,13 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_iniciaActionPerformed
 
+    @Override
+    public Image getIconImage() {
+    Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/icono.png"));
+    
+    return retValue;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -149,6 +161,7 @@ public class Principal extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Principal().setVisible(true);
             }

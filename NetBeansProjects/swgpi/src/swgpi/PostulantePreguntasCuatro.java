@@ -4,6 +4,9 @@
  */
 package swgpi;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Marilyn
@@ -35,6 +38,8 @@ public class PostulantePreguntasCuatro extends javax.swing.JFrame {
         finalizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cuestionario");
+        setIconImage(getIconImage());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pregunta 21", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Batang", 0, 12), new java.awt.Color(0, 102, 102))); // NOI18N
 
@@ -141,6 +146,13 @@ public class PostulantePreguntasCuatro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    @Override
+    public Image getIconImage() {
+    Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/icono.png"));
+    
+    return retValue;
+    }
+    
     /**
      * @param args the command line arguments
      */

@@ -4,6 +4,9 @@
  */
 package swgpi;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Marilyn
@@ -43,6 +46,8 @@ public class Postulante extends javax.swing.JFrame {
         atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Formulario Postulante");
+        setIconImage(getIconImage());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Antecedentes Generales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Batang", 0, 14))); // NOI18N
         jPanel1.setName(""); // NOI18N
@@ -194,6 +199,12 @@ public class Postulante extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_continuarActionPerformed
 
+    @Override
+    public Image getIconImage() {
+    Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/icono.png"));
+    
+    return retValue;
+    }
     /**
      * @param args the command line arguments
      */

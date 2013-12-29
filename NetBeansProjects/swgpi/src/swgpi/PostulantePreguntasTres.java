@@ -4,6 +4,9 @@
  */
 package swgpi;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Marilyn
@@ -41,6 +44,8 @@ public class PostulantePreguntasTres extends javax.swing.JFrame {
         continuar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cuestionario");
+        setIconImage(getIconImage());
         setMinimumSize(new java.awt.Dimension(490, 548));
         setPreferredSize(new java.awt.Dimension(490, 548));
 
@@ -227,6 +232,13 @@ public class PostulantePreguntasTres extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_continuarActionPerformed
 
+    @Override
+    public Image getIconImage() {
+    Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/icono.png"));
+    
+    return retValue;
+    }
+    
     /**
      * @param args the command line arguments
      */
