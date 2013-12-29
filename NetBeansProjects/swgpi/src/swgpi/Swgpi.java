@@ -15,5 +15,7 @@ public class Swgpi {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Principal v = new Principal();
+        v.setVisible(true);
     }
 }
