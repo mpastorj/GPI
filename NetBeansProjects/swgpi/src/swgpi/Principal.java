@@ -50,6 +50,11 @@ public class Principal extends javax.swing.JFrame {
 
         inicia.setFont(new java.awt.Font("Batang", 1, 18)); // NOI18N
         inicia.setText("Iniciar Sesión");
+        inicia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciaActionPerformed(evt);
+            }
+        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/gente.jpg"))); // NOI18N
 
@@ -97,6 +102,17 @@ public class Principal extends javax.swing.JFrame {
     private void opcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_opcionesActionPerformed
+
+    private void iniciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciaActionPerformed
+        // TODO add your handling code here:
+        String modo=(String) opciones.getSelectedItem();
+        if("Postulante".equals(modo)){
+             Postulante v = new Postulante();
+             v.setLocationRelativeTo(null);
+             v.setVisible(true);
+             this.dispose();
+        }
+    }//GEN-LAST:event_iniciaActionPerformed
 
     /**
      * @param args the command line arguments
