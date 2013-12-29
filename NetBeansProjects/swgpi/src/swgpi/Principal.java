@@ -112,6 +112,12 @@ public class Principal extends javax.swing.JFrame {
              v.setVisible(true);
              this.dispose();
         }
+        if("Empleador".equals(modo)){
+             Empleador v = new Empleador();
+             v.setLocationRelativeTo(null);
+             v.setVisible(true);
+             this.dispose();
+        }
     }//GEN-LAST:event_iniciaActionPerformed
 
     /**
