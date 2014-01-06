@@ -4,6 +4,11 @@
  */
 package swgpi;
 
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Marilyn
@@ -37,10 +42,15 @@ public class Empleador extends javax.swing.JFrame {
         jLabel1.setText("Aquí Usted podrá obtener las características específicas ideales en  ");
 
         jLabel2.setFont(new java.awt.Font("Batang", 0, 18)); // NOI18N
-        jLabel2.setText("una persona de acuerdo a un cargo.");
+        jLabel2.setText("                           una persona de acuerdo a un cargo.");
 
         continuar.setFont(new java.awt.Font("Batang", 1, 24)); // NOI18N
         continuar.setText("Continuar");
+        continuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continuarActionPerformed(evt);
+            }
+        });
 
         atras.setFont(new java.awt.Font("Batang", 1, 14)); // NOI18N
         atras.setText("Atrás");
@@ -91,6 +101,41 @@ public class Empleador extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_atrasActionPerformed
 
+    private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
+        // TODO add your handling code here:
+        InterfazEmpleador v = new InterfazEmpleador();
+        v.setLocationRelativeTo(null);
+        v.setVisible(true);
+        this.dispose();
+        
+      ConectarBD();
+      conexion cn = new conexion();
+      
+      String cargo = (String)v.cargo.getSelectedItem(); 
+      cn.setEsSelect(true);
+      cn.setComandoSQL("select nombre from cargo order by nombre");
+      cn.conectar();
+      
+        try {  
+           while(cn.getRst().next())
+           {
+          v.cargo.addItem(cn.getRst().getObject("nombre"));       
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
+        } 
+         cn.cerrarConexion(); 
+    }//GEN-LAST:event_continuarActionPerformed
+
+    private void ConectarBD(){
+    try {
+            Runtime.getRuntime().exec("C:\\wamp\\wampmanager.exe ");
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */

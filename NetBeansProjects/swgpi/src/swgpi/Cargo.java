@@ -4,6 +4,14 @@
  */
 package swgpi;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Marilyn
@@ -32,7 +40,12 @@ public class Cargo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        cargo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cargo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cargo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargoActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("¿Cuál es el cargo al que postula?");
@@ -70,7 +83,7 @@ public class Cargo extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(66, 66, 66)
                 .addComponent(cargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addComponent(continuar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -86,6 +99,12 @@ public class Cargo extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_continuarActionPerformed
 
+    private void cargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargoActionPerformed
+        // TODO add your handling code here:
+      
+    }//GEN-LAST:event_cargoActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -121,7 +140,7 @@ public class Cargo extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox cargo;
+    public javax.swing.JComboBox cargo;
     private javax.swing.JButton continuar;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

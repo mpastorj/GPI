@@ -6,6 +6,11 @@ package swgpi;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -240,12 +245,38 @@ public class Postulante extends javax.swing.JFrame {
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
         // TODO add your handling code here:
         Cargo v = new Cargo();
-        //PostulantePreguntas v = new PostulantePreguntas();
         v.setLocationRelativeTo(null);
         v.setVisible(true);
         this.dispose();
+        
+      ConectarBD();
+      conexion cn = new conexion();
+      
+      String desccargo = (String)v.cargo.getSelectedItem(); 
+      cn.setEsSelect(true);
+      cn.setComandoSQL("select nombre from cargo order by nombre");
+      cn.conectar();
+      
+        try {  
+           while(cn.getRst().next())
+           {
+          v.cargo.addItem(cn.getRst().getObject("nombre"));       
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
+        } 
+         cn.cerrarConexion();  
     }//GEN-LAST:event_continuarActionPerformed
 
+     private void ConectarBD(){
+    try {
+            Runtime.getRuntime().exec("C:\\wamp\\wampmanager.exe ");
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     @Override
     public Image getIconImage() {
     Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/icono.png"));
