@@ -249,7 +249,7 @@ public class Postulante extends javax.swing.JFrame {
         v.setVisible(true);
         this.dispose();
         
-      ConectarBD();
+    //  ConectarBD();
       conexion cn = new conexion();
       
       String desccargo = (String)v.cargo.getSelectedItem(); 
@@ -268,14 +268,14 @@ public class Postulante extends javax.swing.JFrame {
          cn.cerrarConexion();  
     }//GEN-LAST:event_continuarActionPerformed
 
-     private void ConectarBD(){
+  /*   private void ConectarBD(){
     try {
             Runtime.getRuntime().exec("C:\\wamp\\wampmanager.exe ");
             
         } catch (IOException ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+    }*/
     
     @Override
     public Image getIconImage() {

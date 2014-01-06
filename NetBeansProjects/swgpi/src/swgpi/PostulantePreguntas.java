@@ -29,31 +29,37 @@ public class PostulantePreguntas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        pregunta1a = new javax.swing.JRadioButton();
+        pregunta1b = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        pregunta3a = new javax.swing.JRadioButton();
+        pregunta3b = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        pregunta2a = new javax.swing.JRadioButton();
+        pregunta2b = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        pregunta5a = new javax.swing.JRadioButton();
+        pregunta5b = new javax.swing.JRadioButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        pregunta4a = new javax.swing.JRadioButton();
+        pregunta4b = new javax.swing.JRadioButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
+        pregunta6a = new javax.swing.JRadioButton();
+        pregunta6b = new javax.swing.JRadioButton();
         continuar = new javax.swing.JButton();
         jScrollBar1 = new javax.swing.JScrollBar();
 
@@ -65,14 +71,16 @@ public class PostulantePreguntas extends javax.swing.JFrame {
 
         jLabel1.setText("¿Si tiene algún problema en su trabajo usted pide ayuda inmediata a algún colega o superior?");
 
-        jRadioButton1.setText("Sí");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(pregunta1a);
+        pregunta1a.setText("Sí");
+        pregunta1a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                pregunta1aActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setText("No");
+        buttonGroup1.add(pregunta1b);
+        pregunta1b.setText("No");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,9 +88,9 @@ public class PostulantePreguntas extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton1)
+                .addComponent(pregunta1a)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
+                .addComponent(pregunta1b)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
@@ -94,17 +102,19 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)))
+                    .addComponent(pregunta1a)
+                    .addComponent(pregunta1b)))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pregunta 3", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Batang", 0, 12), new java.awt.Color(0, 255, 0))); // NOI18N
 
         jLabel3.setText("¿Le gusta destacarse y ser reconocido por los demás?");
 
-        jRadioButton5.setText("Sí");
+        buttonGroup3.add(pregunta3a);
+        pregunta3a.setText("Sí");
 
-        jRadioButton6.setText("No");
+        buttonGroup3.add(pregunta3b);
+        pregunta3b.setText("No");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -115,9 +125,9 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton5)
+                .addComponent(pregunta3a)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton6)
+                .addComponent(pregunta3b)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -126,17 +136,19 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6)))
+                    .addComponent(pregunta3a)
+                    .addComponent(pregunta3b)))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pregunta 2", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Batang", 0, 12), new java.awt.Color(0, 153, 153))); // NOI18N
 
         jLabel4.setText("Le dicen que tiene que realizar un trabajo con un compañero(a) que pidió un permiso y se ausentará por algunas horas ");
 
-        jRadioButton3.setText("Sí");
+        buttonGroup2.add(pregunta2a);
+        pregunta2a.setText("Sí");
 
-        jRadioButton4.setText("No");
+        buttonGroup2.add(pregunta2b);
+        pregunta2b.setText("No");
 
         jLabel2.setText("usted comienza de inmediato a organizar el trabajo y asignar las funciones de cada uno.");
 
@@ -148,9 +160,9 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jRadioButton3)
+                        .addComponent(pregunta2a)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton4))
+                        .addComponent(pregunta2b))
                     .addComponent(jLabel2))
                 .addGap(0, 94, Short.MAX_VALUE))
         );
@@ -162,17 +174,19 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4)))
+                    .addComponent(pregunta2a)
+                    .addComponent(pregunta2b)))
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pregunta 5", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Batang", 0, 12), new java.awt.Color(255, 102, 0))); // NOI18N
 
         jLabel5.setText("¿La aburre hacer el mismo trabajo una y otra vez?");
 
-        jRadioButton9.setText("Sí");
+        buttonGroup5.add(pregunta5a);
+        pregunta5a.setText("Sí");
 
-        jRadioButton10.setText("No");
+        buttonGroup5.add(pregunta5b);
+        pregunta5b.setText("No");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -182,9 +196,9 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jRadioButton9)
+                        .addComponent(pregunta5a)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton10)))
+                        .addComponent(pregunta5b)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -193,17 +207,19 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton9)
-                    .addComponent(jRadioButton10)))
+                    .addComponent(pregunta5a)
+                    .addComponent(pregunta5b)))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pregunta 4", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Batang", 0, 12), new java.awt.Color(255, 255, 0))); // NOI18N
 
         jLabel6.setText("¿Se proyecta a futuro en la empresa?");
 
-        jRadioButton7.setText("Sí");
+        buttonGroup4.add(pregunta4a);
+        pregunta4a.setText("Sí");
 
-        jRadioButton8.setText("No");
+        buttonGroup4.add(pregunta4b);
+        pregunta4b.setText("No");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -213,9 +229,9 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jRadioButton7)
+                        .addComponent(pregunta4a)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton8)))
+                        .addComponent(pregunta4b)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -224,17 +240,19 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton7)
-                    .addComponent(jRadioButton8)))
+                    .addComponent(pregunta4a)
+                    .addComponent(pregunta4b)))
         );
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pregunta 6", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Batang", 0, 12), new java.awt.Color(153, 0, 153))); // NOI18N
 
         jLabel7.setText("¿Evita la confrontación con sus compañeros de trabajo?");
 
-        jRadioButton11.setText("Sí");
+        buttonGroup6.add(pregunta6a);
+        pregunta6a.setText("Sí");
 
-        jRadioButton12.setText("No");
+        buttonGroup6.add(pregunta6b);
+        pregunta6b.setText("No");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -244,9 +262,9 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jRadioButton11)
+                        .addComponent(pregunta6a)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton12)))
+                        .addComponent(pregunta6b)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -255,8 +273,8 @@ public class PostulantePreguntas extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton11)
-                    .addComponent(jRadioButton12))
+                    .addComponent(pregunta6a)
+                    .addComponent(pregunta6b))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
@@ -323,9 +341,9 @@ public class PostulantePreguntas extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_continuarActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void pregunta1aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pregunta1aActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_pregunta1aActionPerformed
 
     @Override
     public Image getIconImage() {
@@ -369,6 +387,12 @@ public class PostulantePreguntas extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.JButton continuar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -383,18 +407,18 @@ public class PostulantePreguntas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollBar jScrollBar1;
+    protected javax.swing.JRadioButton pregunta1a;
+    protected javax.swing.JRadioButton pregunta1b;
+    protected javax.swing.JRadioButton pregunta2a;
+    protected javax.swing.JRadioButton pregunta2b;
+    protected javax.swing.JRadioButton pregunta3a;
+    protected javax.swing.JRadioButton pregunta3b;
+    protected javax.swing.JRadioButton pregunta4a;
+    protected javax.swing.JRadioButton pregunta4b;
+    protected javax.swing.JRadioButton pregunta5a;
+    protected javax.swing.JRadioButton pregunta5b;
+    protected javax.swing.JRadioButton pregunta6a;
+    protected javax.swing.JRadioButton pregunta6b;
     // End of variables declaration//GEN-END:variables
 }
