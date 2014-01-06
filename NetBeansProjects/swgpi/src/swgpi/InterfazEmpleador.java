@@ -36,11 +36,7 @@ public class InterfazEmpleador extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nivel = new javax.swing.JComboBox();
         jPanel1 = new javax.swing.JPanel();
-        habilidades = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        competencias = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        necesidades = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         estimulos = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -48,11 +44,22 @@ public class InterfazEmpleador extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         tp = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        habilidades = new javax.swing.JComboBox();
+        competencias = new javax.swing.JComboBox();
+        necesidades = new javax.swing.JComboBox();
+        jLabel3 = new javax.swing.JLabel();
         salir = new javax.swing.JButton();
+        descripciona = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         cargo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cargo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cargoItemStateChanged(evt);
+            }
+        });
         cargo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cargoActionPerformed(evt);
@@ -61,7 +68,7 @@ public class InterfazEmpleador extends javax.swing.JFrame {
 
         jLabel1.setText("Cargo que desea analizar:");
 
-        jLabel2.setText("Nivel estratégico:");
+        jLabel2.setText("Nivel Organizacional:");
 
         nivel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Estratégico", "Táctico", "Operacional" }));
         nivel.addItemListener(new java.awt.event.ItemListener() {
@@ -77,8 +84,6 @@ public class InterfazEmpleador extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("PARÁMETROS"));
 
-        jLabel3.setText("   HABILIDADES");
-
         jLabel4.setText("   COMPETENCIAS");
 
         jLabel5.setText("    NECESIDADES");
@@ -89,67 +94,89 @@ public class InterfazEmpleador extends javax.swing.JFrame {
 
         jLabel8.setText("    T/P:");
 
+        necesidades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                necesidadesActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("   HABILIDADES");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(habilidades, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(competencias, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(xy, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8)))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(necesidades, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(0, 41, Short.MAX_VALUE))
-                            .addComponent(estimulos)))
+                                .addGap(66, 66, 66)
+                                .addComponent(jLabel7))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(21, 21, 21)
+                        .addComponent(xy, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(tp, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel4)
+                            .addComponent(habilidades, 0, 146, Short.MAX_VALUE)
+                            .addComponent(competencias, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
+                        .addComponent(tp, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(necesidades, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(0, 105, Short.MAX_VALUE))
+                    .addComponent(estimulos))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addGap(4, 4, 4)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(estimulos, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                    .addComponent(necesidades)
-                    .addComponent(competencias)
-                    .addComponent(habilidades))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel3))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(estimulos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(habilidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(necesidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(competencias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(xy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
-                    .addComponent(tp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(26, 26, 26))
+                    .addComponent(jLabel8)
+                    .addComponent(tp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         salir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         salir.setText("Salir");
+
+        jLabel9.setText("DESCRIPCIÓN");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,11 +195,17 @@ public class InterfazEmpleador extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(cargo, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)
                         .addComponent(salir))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(descripciona, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -183,16 +216,20 @@ public class InterfazEmpleador extends javax.swing.JFrame {
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(nivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(nivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(cargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(salir)))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(cargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel9)
+                .addGap(8, 8, 8)
+                .addComponent(descripciona, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -205,23 +242,92 @@ public class InterfazEmpleador extends javax.swing.JFrame {
       conexion cn = new conexion();
       String cargos = (String)cargo.getSelectedItem(); 
       cn.setEsSelect(true);
-      cn.setComandoSQL("select xy from cargo where nombre='"+cargos+"'");
+      cn.setComandoSQL("select xy,tp,descripción from cargo where nombre='"+cargos+"'");
       cn.conectar();
       
         try {  
            while(cn.getRst().next())
            {
             cn.getRst().getObject("xy");
-            String nombres=(String)cn.getRst().getObject("xy");
-             xy.setText(nombres);      
+            cn.getRst().getObject("tp");
+            cn.getRst().getObject("descripción");
+            String nombresxy=(String)cn.getRst().getObject("xy");
+            String nombrestp=(String)cn.getRst().getObject("tp");
+            String desc=(String)cn.getRst().getObject("descripción");
+            xy.setText(nombresxy);    
+            tp.setText(nombrestp); 
+            descripciona.setText(desc); 
         }
         } catch (SQLException ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
         } 
          cn.cerrarConexion();
 
+         int codigo=0;
+         conexion cn1 = new conexion();
+        cn1.setEsSelect(true);
+        cn1.setComandoSQL("select idCargo from cargo where nombre='"+cargos+"'");
+      
+      cn1.conectar();
+      
+        try {  
+           while(cn1.getRst().next())
+           {
+            codigo=cn1.getRst().getInt("idCargo");
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
+        } 
+         cn1.cerrarConexion();
+         
+            conexion cn2 = new conexion();
+      cn2.setEsSelect(true);
+      cn2.setComandoSQL("select nombre from Habilidades where idHabilidades IN (select Habilidades_idHabilidades from cargo_has_habilidades where Cargo_idCargo='"+codigo+"')");
+      
+      cn2.conectar();
+      
+        try {  
+           while(cn2.getRst().next())
+           {
+            habilidades.addItem(cn2.getRst().getObject("nombre"));  
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
+        } 
+         cn2.cerrarConexion();
         
+        
+         conexion cn3 = new conexion();
+      cn3.setEsSelect(true);
+      cn3.setComandoSQL("select nombre from Competencias where idCompetencias IN (select Competencias_idCompetencias from cargo_has_competencias where Cargo_idCargo='"+codigo+"')");
+      
+      cn3.conectar();
+      
+        try {  
+           while(cn3.getRst().next())
+           {
+            competencias.addItem(cn3.getRst().getObject("nombre"));  
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
+        } 
+         cn3.cerrarConexion();
    
+         conexion cn4 = new conexion();
+      cn4.setEsSelect(true);
+      cn4.setComandoSQL("select nombre from Necesidades where idNecesidades IN (select Necesidades_idNecesidades from cargo_has_necesidades where Cargo_idCargo='"+codigo+"')");
+      
+      cn4.conectar();
+      
+        try {  
+           while(cn4.getRst().next())
+           {
+            necesidades.addItem(cn4.getRst().getObject("nombre"));  
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
+        } 
+         cn4.cerrarConexion();
     }//GEN-LAST:event_cargoActionPerformed
 
     private void nivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nivelActionPerformed
@@ -261,6 +367,33 @@ public class InterfazEmpleador extends javax.swing.JFrame {
         cargo.removeAllItems();
     }//GEN-LAST:event_nivelItemStateChanged
 
+    private void cargoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cargoItemStateChanged
+        // TODO add your handling code here:
+        habilidades.removeAllItems();
+        competencias.removeAllItems();
+        necesidades.removeAllItems();
+    }//GEN-LAST:event_cargoItemStateChanged
+
+    private void necesidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_necesidadesActionPerformed
+        // TODO add your handling code here:
+        String nec= (String)necesidades.getSelectedItem(); 
+        conexion cn = new conexion();
+      
+      cn.setEsSelect(true);
+      cn.setComandoSQL("select estimulo from necesidades where nombre='"+nec+"'");
+      cn.conectar();
+      
+        try {  
+           while(cn.getRst().next())
+           {
+          estimulos.setText((String)cn.getRst().getObject("estimulo"));     
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
+        } 
+         cn.cerrarConexion();
+    }//GEN-LAST:event_necesidadesActionPerformed
+
     
     
     
@@ -293,6 +426,7 @@ public class InterfazEmpleador extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new InterfazEmpleador().setVisible(true);
             }
@@ -300,9 +434,10 @@ public class InterfazEmpleador extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox cargo;
-    private javax.swing.JTextField competencias;
+    private javax.swing.JComboBox competencias;
+    private javax.swing.JTextField descripciona;
     private javax.swing.JTextField estimulos;
-    private javax.swing.JTextField habilidades;
+    private javax.swing.JComboBox habilidades;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -311,8 +446,9 @@ public class InterfazEmpleador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField necesidades;
+    private javax.swing.JComboBox necesidades;
     public javax.swing.JComboBox nivel;
     private javax.swing.JButton salir;
     public javax.swing.JTextField tp;
