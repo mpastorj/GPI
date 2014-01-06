@@ -201,7 +201,7 @@ public class InterfazEmpleador extends javax.swing.JFrame {
 
     private void cargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargoActionPerformed
         // TODO add your handling code here:
-      ConectarBD();
+ 
       conexion cn = new conexion();
       String cargos = (String)cargo.getSelectedItem(); 
       cn.setEsSelect(true);
@@ -237,7 +237,7 @@ public class InterfazEmpleador extends javax.swing.JFrame {
              tipo=1;
         }
         
-      ConectarBD();
+     
       conexion cn = new conexion();
       
       String cargos = (String)cargo.getSelectedItem(); 
@@ -262,14 +262,7 @@ public class InterfazEmpleador extends javax.swing.JFrame {
     }//GEN-LAST:event_nivelItemStateChanged
 
     
-    private void ConectarBD(){
-    try {
-            Runtime.getRuntime().exec("C:\\wamp\\wampmanager.exe ");
-            
-        } catch (IOException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+    
     
     /**
      * @param args the command line arguments
