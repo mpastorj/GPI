@@ -107,24 +107,6 @@ public class Empleador extends javax.swing.JFrame {
         v.setLocationRelativeTo(null);
         v.setVisible(true);
         this.dispose();
-        
-      ConectarBD();
-      conexion cn = new conexion();
-      
-      String cargo = (String)v.cargo.getSelectedItem(); 
-      cn.setEsSelect(true);
-      cn.setComandoSQL("select nombre from cargo order by nombre");
-      cn.conectar();
-      
-        try {  
-           while(cn.getRst().next())
-           {
-          v.cargo.addItem(cn.getRst().getObject("nombre"));       
-        }
-        } catch (SQLException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, "Error al cargar lista de cargos", ex);
-        } 
-         cn.cerrarConexion(); 
     }//GEN-LAST:event_continuarActionPerformed
 
     private void ConectarBD(){
